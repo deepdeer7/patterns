@@ -44,7 +44,7 @@ class Bitcoin implements Subject {
 
 class Binance implements Observer {
     public update(subject: Subject): void {
-        if (subject instanceof Bitcoin && subject.price < 50000) {
+        if (subject instanceof Bitcoin && subject.price > 50000) {
             console.log('Good price! Should sell');
         }
     }
